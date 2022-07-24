@@ -1,5 +1,5 @@
 Feature: verify a new book is added
-@book
+  @B26G17-106 @book
   Scenario: verify a new book is added
 Given Librarian is on the home page
 When Librarian clicks Books module

@@ -2,6 +2,7 @@ package com.cydeo.library.step_definitions;
 
 import com.cydeo.library.pages.BookPage;
 import com.cydeo.library.pages.LoginPage;
+import com.cydeo.library.utilities.BrowserUtils;
 import com.cydeo.library.utilities.ConfigurationReader;
 import com.cydeo.library.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -27,11 +28,13 @@ bookPage.addBook.click();
 //    BrowserUtils.waitForVisibility(WebElement bookPage.title);
     }
     @When("Librarian enters BookName, ISBN, Year, Author and Description")
-    public void librarian_enters_book_name_isbn_year_author_and_description() {
-bookPage.BookName.sendKeys("2am Thoughts");
+    public void librarian_enters_book_name_isbn_year_author_and_description() throws InterruptedException {
+Thread.sleep(3000);
+        bookPage.BookName.sendKeys("2am Thoughts");
 bookPage.Author.sendKeys("Makenze Campbell");
 bookPage.BookCategory.sendKeys("poetry");
 bookPage.ISBN.sendKeys("9781771681643");
+   bookPage.Year.sendKeys("2009");
     }
     @When("Librarian verifies a new book is added")
     public void librarian_verifies_a_new_book_is_added() {
