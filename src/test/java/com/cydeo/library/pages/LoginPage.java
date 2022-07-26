@@ -17,7 +17,8 @@ public class LoginPage {
     @FindBy(xpath = "//button")
     public WebElement signinBtn;
 
-    // No page elements added
+    @FindBy (xpath = "//div[@class='alert alert-danger']")
+    public WebElement invalidLoginErrorMsg;
 
     public LoginPage() {
         PageFactory.initElements(Driver.getDriver(), this);
