@@ -42,8 +42,8 @@ public class LoginStepDef {
 
     @When("I login as a student")
     public void i_login_as_a_student() {
-        loginPage.emailInput.sendKeys(ConfigurationReader.getProperty("student55_user"));
-        loginPage.passwordInput.sendKeys(ConfigurationReader.getProperty("student55_pass"));
+        loginPage.emailInput.sendKeys(ConfigurationReader.getProperty("student1_username"));
+        loginPage.passwordInput.sendKeys(ConfigurationReader.getProperty("student1_password"));
         loginPage.signinBtn.click();
     }
 

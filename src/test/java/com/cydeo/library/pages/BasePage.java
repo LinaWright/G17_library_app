@@ -24,4 +24,6 @@ public abstract class BasePage {
     @FindBy(id="navbarDropdown")
     public WebElement userNameLink;
 
+    @FindBy(xpath = "//span[.='Borrowing Books']")
+    public WebElement borrowingBooks;
 }
